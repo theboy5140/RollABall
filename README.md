@@ -5,6 +5,12 @@ __What is Roll a Ball__
 This is my first unity3d game project, I build this project followed by the unity3d office learning tutorial.
 This is a very simple game help you understand the normal operation about unity3d engine. And this is my starter.
 
+__Development Platform__
+
+OS : Windows 10 Enterprie Edition 64 Bit
+
+Engine : Unity 5.5.1f1 Personal 64 Bit 
+
 __Where to see the video__
 
 [Unity3d office tutorial project video - Roll A Boll](https://unity3d.com/learn/tutorials/projects/roll-ball-tutorial)
