@@ -18,8 +18,7 @@ public class PlayerController : MonoBehaviour {
         float moveVertical = Input.GetAxis ("Vertical");
         Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
         rb.AddForce (movement * speed);
-
-        Debug.Log ("是否");
-
+        string a = "瑟瑟发抖速度";
+        Debug.Log (a);
     }
 }
