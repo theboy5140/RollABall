@@ -14,16 +14,12 @@ public class PlayerController : MonoBehaviour {
 
     void FixedUpdate ()
     {
-        //float moveHorizontal = Input.GetAxis ("Horizontal");
-        //float moveVertical = Input.GetAxis ("Vertical");
-        if (Input.touchCount > 0 ) {
-            
-            Vector2 touchDeltaPosition = Input.GetTouch(0).deltaPosition;
+        float moveHorizontal = Input.GetAxis ("Horizontal");
+        float moveVertical = Input.GetAxis ("Vertical");
+        Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
+        rb.AddForce (movement * speed);
 
-            Vector3 movement = new Vector3 (touchDeltaPosition.x, 0.0f, touchDeltaPosition.y);
+        Debug.Log ("是否");
 
-            rb.AddForce (movement * speed);
-        }
-  
     }
 }
