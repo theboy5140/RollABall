@@ -18,7 +18,14 @@ public class PlayerController : MonoBehaviour {
         float moveVertical = Input.GetAxis ("Vertical");
         Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
         rb.AddForce (movement * speed);
-        string a = "瑟瑟发抖速度";
-        Debug.Log (a);
+
     }
+
+    void OnTriggerEnter(Collider other){
+        if (other.gameObject.CompareTag ("Pick Up")) {
+        
+            other.gameObject.SetActive (false);
+        }
+    }
+
 }
