@@ -7,19 +7,16 @@ public class CameraContoller : MonoBehaviour {
     public GameObject player;
 
     private Vector3  offset;
-	// Use this for initialization
+
 	void Start () {
         offset = transform.position - player.transform.position;
         Debug.Log (offset);
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
+
+    void Update () {
 	}
 
     void LateUpdate(){
-
         transform.position = player.transform.position + offset;
     }
 }

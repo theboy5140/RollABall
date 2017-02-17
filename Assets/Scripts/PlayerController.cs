@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour {
     public Text winText;
 
     private float speed = 10;
-    private Rigidbody rb;
     private int count;
+    private Rigidbody rb;
 
     void Start ()
     {
@@ -21,11 +21,10 @@ public class PlayerController : MonoBehaviour {
 
     void FixedUpdate ()
     {
-        float moveHorizontal = Input.GetAxis ("Horizontal");
-        float moveVertical = Input.GetAxis ("Vertical");
+        float moveHorizontal = Input.acceleration.x;
+        float moveVertical = Input.acceleration.y;
         Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
         rb.AddForce (movement * speed);
-
     }
 
     void OnTriggerEnter(Collider other){
@@ -38,11 +37,10 @@ public class PlayerController : MonoBehaviour {
 
     void SetCountText()
     {
-        countText.text = "得分: " + count.ToString ();
+        countText.text = "Score: " + count.ToString ();
 
         if (count >= 42) {
-        
-            winText.text = "花花你好吊";
+            winText.text = "YOU WIN";
         }
     }
 }
